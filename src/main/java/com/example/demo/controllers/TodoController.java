@@ -23,12 +23,17 @@ public class TodoController {
         return todoService.getAllTodos();
     }
     @PostMapping("")
-    public ResponseEntity<TodoEntity> insertTodo(TodoEntity todoEntity){
+    public ResponseEntity<TodoEntity> insertTodo(@RequestBody TodoEntity todoEntity){
         return todoService.insertTodo(todoEntity);
     }
 
     @DeleteMapping("")
     public ResponseEntity deleteTodo(@RequestParam Long id) throws Exception {
         return todoService.deleteTodo(id);
+    }
+
+    @PutMapping("")
+    public ResponseEntity<TodoEntity> updateTodo(@RequestBody TodoEntity todoEntity){
+        return todoService.updateTodo(todoEntity);
     }
 }

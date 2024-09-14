@@ -36,4 +36,10 @@ public class TodoServiceImpl implements TodoService {
         todoJpaRepository.delete(todoEntityToDelete.get());
         return ResponseEntity.ok(DELETE_SUCCCESSFUL);
     }
+
+    @Override
+    public ResponseEntity<TodoEntity> updateTodo(TodoEntity todoEntity) {
+        TodoEntity updatedTodoEntity = todoJpaRepository.save(todoEntity);
+        return ResponseEntity.ok(updatedTodoEntity);
+    }
 }

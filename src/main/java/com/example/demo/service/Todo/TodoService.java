@@ -10,5 +10,7 @@ public interface TodoService {
     public ResponseEntity<TodoEntity> insertTodo(TodoEntity todoEntity);
     public ResponseEntity deleteTodo(Long id) throws Exception;
 
+    public ResponseEntity<TodoEntity> updateTodo(TodoEntity todoEntity);
+
 
     }

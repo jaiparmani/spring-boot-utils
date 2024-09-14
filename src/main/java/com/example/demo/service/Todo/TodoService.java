@@ -8,4 +8,7 @@ import java.util.List;
 public interface TodoService {
     public ResponseEntity<List<TodoEntity>> getAllTodos();
     public ResponseEntity<TodoEntity> insertTodo(TodoEntity todoEntity);
-}
+    public ResponseEntity deleteTodo(Long id) throws Exception;
+
+
+    }
